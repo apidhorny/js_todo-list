@@ -1,6 +1,12 @@
-// @import '_normalize.scss';
-// @import '_variables.scss';
-// @import '_common.scss';
+:root {
+    --nav-text-color: #ffffff;
+    --nav-bg-color: #fcfcfc;
+    --select-color: #353535;
+    --body-color: #292828;
+    --border-color: #ffffff;
+    --body-text-color: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +14,33 @@
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--body-color);
+    color: var(--body-text-color);
 }
+.nav {
+    background-color: var(--nav-bg-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #a7a3a3;
+    &__link {
+        text-decoration: none;
+        color: var(--nav-text-color);
+        font-size: 1.5rem;
+    }
+}
+
+.thema-select {
+    border: 1px solid var(--select-color);
+    padding: 0.3rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -16,10 +48,12 @@ body {
 }
 .form-section {
     text-align: center;
-    border: 1px solid teal;
+    border: 1px solid var(--border-color);
     max-width: 600px;
-    margin: 0 auto;
-    margin-bottom: 5rem;
+    margin: 30px auto 0;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    padding: 1rem;
 }
 h1 {
     padding: 0.5rem;
@@ -32,16 +66,23 @@ h1 {
 input {
     margin-bottom: 1rem;
     padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    &:hover {
+        background-color: #e0e0e0;
+    }
+    &:focus {
+        color: #3f2e8b;
+        font-weight: bold;
+    }
 }
-.input-task {
-}
-.input-body {
-}
+
 .btn {
     padding: 0.5rem;
+    border-radius: 10px;
 }
 .btn-add-task {
-    background-color: #3ef374;
+    background-color: #14ad42;
     outline: none;
     border: 1px solid green;
     &:hover {
@@ -50,16 +91,18 @@ input {
     }
 }
 .task-list-section {
-    border: 1px solid teal;
     padding: 1rem;
+    border-radius: 10px;
 }
 .task-list {
     list-style: none;
 }
 .task-item {
-    border: 1px solid teal;
+    border: 1px solid var(--border-color);
+
     padding: 1rem;
     margin-bottom: 1rem;
+    border-radius: 10px;
 }
 .task-title {
     margin-bottom: 0.5rem;

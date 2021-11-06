@@ -1,3 +1,12 @@
+:root {
+  --nav-text-color: #ffffff;
+  --nav-bg-color: #fcfcfc;
+  --select-color: #353535;
+  --body-color: #292828;
+  --border-color: #ffffff;
+  --body-text-color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +16,38 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--body-color);
+  color: var(--body-text-color);
+}
+
+.nav {
+  background-color: var(--nav-bg-color);
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #a7a3a3;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--nav-text-color);
+  font-size: 1.5rem;
+}
+
+.thema-select {
+  border: 1px solid var(--select-color);
+  padding: 0.3rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: none;
+}
+
+.thema-select:hover {
+  cursor: pointer;
 }
 
 .container {
@@ -17,10 +58,12 @@ body {
 
 .form-section {
   text-align: center;
-  border: 1px solid teal;
+  border: 1px solid var(--border-color);
   max-width: 600px;
-  margin: 0 auto;
-  margin-bottom: 5rem;
+  margin: 30px auto 0;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 h1 {
@@ -41,14 +84,26 @@ h1 {
 input {
   margin-bottom: 1rem;
   padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+input:hover {
+  background-color: #e0e0e0;
+}
+
+input:focus {
+  color: #3f2e8b;
+  font-weight: bold;
 }
 
 .btn {
   padding: 0.5rem;
+  border-radius: 10px;
 }
 
 .btn-add-task {
-  background-color: #3ef374;
+  background-color: #14ad42;
   outline: none;
   border: 1px solid green;
 }
@@ -59,8 +114,8 @@ input {
 }
 
 .task-list-section {
-  border: 1px solid teal;
   padding: 1rem;
+  border-radius: 10px;
 }
 
 .task-list {
@@ -68,9 +123,10 @@ input {
 }
 
 .task-item {
-  border: 1px solid teal;
+  border: 1px solid var(--border-color);
   padding: 1rem;
   margin-bottom: 1rem;
+  border-radius: 10px;
 }
 
 .task-title {
